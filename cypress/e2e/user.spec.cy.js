@@ -1,11 +1,13 @@
 import userData from '../fixtures/users/userData.json'
 import DashBoardPage from '../pages/dashboardPages'
 import LoginPage from '../pages/loginPages'
+import MenuPage from '../pages/menuPages'
 import MyInfoPage from '../pages/myInfoPages'
 
 const loginPage = new LoginPage
 const dashboardPage = new DashBoardPage
 const myInfoPage = new MyInfoPage
+const menuPage = new MenuPage
 
 describe('Orange HRM Tests', () => {
 
@@ -13,8 +15,9 @@ describe('Orange HRM Tests', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUsers(userData.userSucess.username, userData.userSucess.password)
 
-    dashboardPage.accessDashboard()
-    dashboardPage.dashboardPageValidation()
+    dashboardPage.checkDashboardPage()
+    
+    menuPage.accessMyInfo()
 
     myInfoPage.fillOutDetails()
 

@@ -6,11 +6,8 @@ class DashBoardPage {
         return selectors
     }
 
-    accessDashboard() {
-        cy.location('pathname').should('equal', '/web/index.php/dashboard/index')    
-    }
-
-    dashboardPageValidation(username, password) {
+    checkDashboardPage() {
+        cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
         cy.get(this.selectorsList().dashboardGrid)
     }
 }
