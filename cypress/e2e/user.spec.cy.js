@@ -6,7 +6,7 @@ import userData from '../fixtures/users/userData.json'
 
 const Chance = require('chance')
 
-const chance = new chance()
+const chance = new Chance()
 const myInfoPage = new MyInfoPage
 const menuPage = new MenuPage
 const loginPage = new LoginPage
